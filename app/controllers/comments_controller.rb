@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
     @citation = Citation.find(params[:citation_id])
-    @citation = @citation.comments.create(comment_params)
+    @comment = @citation.comments.create(comment_params)
     redirect_to citation_path(@citation)
   end
 
